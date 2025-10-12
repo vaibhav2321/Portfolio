@@ -1,0 +1,593 @@
+.experience {
+  padding: 6rem 0;
+  background: #000;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #ff6b35;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.subsection-title {
+  font-size: 1.8rem;
+  color: #ff6b35;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #ff6b35, rgba(255, 107, 53, 0.3));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 4rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: #ff6b35;
+  border-radius: 50%;
+  border: 4px solid #000;
+  z-index: 2;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: rgba(255, 107, 53, 0.4);
+  background: rgba(255, 107, 53, 0.05);
+}
+
+.experience-header-info {
+  margin-bottom: 1.5rem;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  color: #ff6b35;
+  font-weight: 600;
+}
+
+.job-type {
+  background: rgba(255, 107, 53, 0.2);
+  color: #ff6b35;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.job-details {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.job-details span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.job-details svg {
+  color: #ff6b35;
+}
+
+.job-description {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.achievements h5,
+.technologies-used h5 {
+  color: #ff6b35;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.achievements li {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.5;
+}
+
+.achievements li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #ff6b35;
+  font-weight: bold;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: rgba(255, 107, 53, 0.1);
+  color: #ff6b35;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.education-item:hover {
+  border-color: rgba(255, 107, 53, 0.4);
+  background: rgba(255, 107, 53, 0.05);
+}
+
+.degree-title {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.institution-name {
+  color: #ff6b35;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.education-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.education-period {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.cgpa {
+  color: #ff6b35;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.education-description {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.experience-cta {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.05));
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+}
+
+.experience-cta h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.experience-cta p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e55a2b;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .experience {
+    padding: 5rem 0;
+  }
+
+  .experience-content {
+    gap: 3.5rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .timeline-content {
+    padding: 1.8rem;
+  }
+
+  .job-title {
+    font-size: 1.4rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  .experience-cta {
+    padding: 2.5rem;
+  }
+
+  .experience-cta h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .experience {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .subsection-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .timeline-item {
+    padding-left: 3rem;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-marker {
+    left: 6px;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+  }
+
+  .job-title {
+    font-size: 1.3rem;
+  }
+
+  .company-name {
+    font-size: 0.95rem;
+  }
+
+  .job-type {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .job-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .job-details span {
+    font-size: 0.85rem;
+  }
+
+  .job-description {
+    font-size: 0.95rem;
+  }
+
+  .achievements h5,
+  .technologies-used h5 {
+    font-size: 0.95rem;
+  }
+
+  .achievements li {
+    font-size: 0.85rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .company-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .education-item {
+    padding: 1.5rem;
+  }
+
+  .degree-title {
+    font-size: 1.2rem;
+  }
+
+  .institution-name {
+    font-size: 0.95rem;
+  }
+
+  .education-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .education-period,
+  .cgpa {
+    font-size: 0.85rem;
+  }
+
+  .education-description {
+    font-size: 0.85rem;
+  }
+
+  .experience-cta {
+    padding: 2rem;
+  }
+
+  .experience-cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .experience-cta p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .experience {
+    padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 0.8rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .subsection-title {
+    font-size: 1.4rem;
+  }
+
+  .timeline-item {
+    padding-left: 2.5rem;
+  }
+
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timeline-marker {
+    left: 3px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline-content {
+    padding: 1.2rem;
+  }
+
+  .job-title {
+    font-size: 1.2rem;
+  }
+
+  .company-name {
+    font-size: 0.9rem;
+  }
+
+  .job-type {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .job-details span {
+    font-size: 0.8rem;
+  }
+
+  .job-description {
+    font-size: 0.9rem;
+  }
+
+  .achievements h5,
+  .technologies-used h5 {
+    font-size: 0.9rem;
+  }
+
+  .achievements li {
+    font-size: 0.8rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .education-item {
+    padding: 1.2rem;
+  }
+
+  .degree-title {
+    font-size: 1.1rem;
+  }
+
+  .institution-name {
+    font-size: 0.9rem;
+  }
+
+  .education-period,
+  .cgpa {
+    font-size: 0.8rem;
+  }
+
+  .education-description {
+    font-size: 0.8rem;
+  }
+
+  .experience-cta {
+    padding: 1.5rem;
+  }
+
+  .experience-cta h3 {
+    font-size: 1.3rem;
+  }
+
+  .experience-cta p {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
