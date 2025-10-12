@@ -74,6 +74,14 @@
   width: 100%;
 }
 
+.nav-list li a.active {
+  color: #ff6b35;
+}
+
+.nav-list li a.active::after {
+  width: 100%;
+}
+
 .menu-toggle {
   display: none;
   background: none;

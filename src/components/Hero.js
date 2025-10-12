@@ -110,7 +110,7 @@ const Hero = () => {
                 <div className="floating-element element-6">MySQL</div>
                 <div className="floating-element element-7">AWS</div>
                 <div className="floating-element element-8">Git</div>
-                {/* <div className="floating-element element-9">Express.js</div> */}
+                <div className="floating-element element-9">ERPNext</div>
                 <div className="floating-element element-10">Next.js</div>
                 <div className="floating-element element-11">Tailwind CSS</div>
               </div>

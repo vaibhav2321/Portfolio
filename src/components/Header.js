@@ -6,10 +6,23 @@ import './Header.css';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Update active section based on scroll position
+      const sections = ['home', 'about', 'services', 'projects', 'experience', 'contact'];
+      const scrollPosition = window.scrollY + 100; // Offset for header height
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -46,12 +59,12 @@ const Header = () => {
 
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-list">
-            <li><a href="#home" onClick={() => scrollToSection('home')}>Home</a></li>
-            <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
-            <li><a href="#services" onClick={() => scrollToSection('services')}>Services</a></li>
-            <li><a href="#projects" onClick={() => scrollToSection('projects')}>Projects</a></li>
-            <li><a href="#experience" onClick={() => scrollToSection('experience')}>Experience</a></li>
-            <li><a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a></li>
+            <li><a href="#home" onClick={() => scrollToSection('home')} className={activeSection === 'home' ? 'active' : ''}>Home</a></li>
+            <li><a href="#about" onClick={() => scrollToSection('about')} className={activeSection === 'about' ? 'active' : ''}>About</a></li>
+            <li><a href="#services" onClick={() => scrollToSection('services')} className={activeSection === 'services' ? 'active' : ''}>Services</a></li>
+            <li><a href="#projects" onClick={() => scrollToSection('projects')} className={activeSection === 'projects' ? 'active' : ''}>Projects</a></li>
+            <li><a href="#experience" onClick={() => scrollToSection('experience')} className={activeSection === 'experience' ? 'active' : ''}>Experience</a></li>
+            <li><a href="#contact" onClick={() => scrollToSection('contact')} className={activeSection === 'contact' ? 'active' : ''}>Contact</a></li>
           </ul>
         </nav>
 
