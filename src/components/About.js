@@ -43,7 +43,7 @@ const About = () => {
           <motion.div className="about-text" variants={itemVariants}>
             <h2 className="section-title">About Me</h2>
             <div className="experience-counter">
-              <div className="counter-number">2+</div>
+              <div className="counter-number">1.5+</div>
               <div className="counter-label">Years of Experience</div>
             </div>
             

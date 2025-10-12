@@ -106,6 +106,13 @@ const Hero = () => {
                 <div className="floating-element element-2">Node.js</div>
                 <div className="floating-element element-3">JavaScript</div>
                 <div className="floating-element element-4">Python</div>
+                <div className="floating-element element-5">Frappe Framework</div>
+                <div className="floating-element element-6">MySQL</div>
+                <div className="floating-element element-7">AWS</div>
+                <div className="floating-element element-8">Git</div>
+                {/* <div className="floating-element element-9">Express.js</div> */}
+                <div className="floating-element element-10">Next.js</div>
+                <div className="floating-element element-11">Tailwind CSS</div>
               </div>
             </div>
           </motion.div>
