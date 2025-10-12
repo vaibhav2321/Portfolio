@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaExternalLinkAlt, FaGithub, FaPlay } from 'react-icons/fa';
+import ImagePlaceholder from './ImagePlaceholder';
+import profilePhoto from '../assets/profile_photo.png';
 import './Projects.css';
 
 const Projects = () => {
@@ -128,12 +130,11 @@ const Projects = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="project-image">
-                <div className="image-placeholder">
-                  <div className="placeholder-content">
-                    <FaCode />
-                    <span>{project.title}</span>
-                  </div>
-                </div>
+                <ImagePlaceholder 
+                  src={profilePhoto}
+                  alt={project.title}
+                  fallbackText={project.title}
+                />
                 <div className="project-overlay">
                   <div className="project-links">
                     <motion.a 

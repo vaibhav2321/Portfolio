@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaDownload, FaEnvelope } from 'react-icons/fa';
+import profilePhoto from '../assets/profile_photo.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -93,7 +94,11 @@ const Hero = () => {
             <div className="image-container">
               <div className="profile-image">
                 <div className="image-placeholder">
-                  <span>VV</span>
+                  <img 
+                    src={profilePhoto} 
+                    alt="Vaibhav Verma" 
+                    className="profile-photo"
+                  />
                 </div>
               </div>
               <div className="floating-elements">
