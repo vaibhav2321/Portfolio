@@ -1,8 +1,9 @@
 import React from 'react';
 import './ImagePlaceholder.css';
+import defaultProjectImage from '../assets/default_project_image.png';
 
 const ImagePlaceholder = ({ 
-  src = '/images/logo.png', 
+  src = defaultProjectImage, 
   alt = 'Image', 
   className = '', 
   size = 'medium',
@@ -23,9 +24,11 @@ const ImagePlaceholder = ({
   if (imageError) {
     return (
       <div className={`image-placeholder ${sizeClasses[size]} ${className}`}>
-        <div className="placeholder-content">
-          <span>{fallbackText}</span>
-        </div>
+        <img 
+          src={defaultProjectImage} 
+          alt={alt} 
+          className="placeholder-image"
+        />
       </div>
     );
   }

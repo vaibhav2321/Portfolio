@@ -25,8 +25,24 @@ const Header = () => {
       }
     };
 
+    // Handle URL hash changes
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1);
+      if (hash && ['home', 'about', 'services', 'projects', 'experience', 'contact'].includes(hash)) {
+        setActiveSection(hash);
+      }
+    };
+
+    // Initial check for hash
+    handleHashChange();
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, []);
 
   const toggleMenu = () => {

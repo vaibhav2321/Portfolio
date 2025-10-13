@@ -103,14 +103,16 @@ const About = () => {
                 <span className="tech-tag">Node.js</span>
                 <span className="tech-tag">JavaScript</span>
                 <span className="tech-tag">Python</span>
-                <span className="tech-tag">Java</span>
-                <span className="tech-tag">MongoDB</span>
+                <span className="tech-tag">Frappe Framework</span>
                 <span className="tech-tag">MySQL</span>
+                <span className="tech-tag">PostgreSQL</span>
                 <span className="tech-tag">AWS</span>
                 <span className="tech-tag">Git</span>
-                <span className="tech-tag">Express.js</span>
+                <span className="tech-tag">ERPNext</span>
                 <span className="tech-tag">Next.js</span>
                 <span className="tech-tag">Tailwind CSS</span>
+                <span className="tech-tag">HTML</span>
+                <span className="tech-tag">CSS</span>
               </div>
             </div>
           </motion.div>

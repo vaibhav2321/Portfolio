@@ -55,6 +55,14 @@ const Experience = () => {
       period: '2019-2020',
       cgpa: null,
       description: 'Completed higher secondary education with focus on science and mathematics.'
+    },
+    {
+      id: 3,
+      degree: 'Matriculation - CBSE',
+      institution: 'DAV Senior Secondary School, India',
+      period: '2017 - 2018',
+      cgpa: null,
+      description: 'Completed Class X (Matriculation) under CBSE curriculum.'
     }
   ];
 

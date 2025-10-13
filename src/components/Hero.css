@@ -388,9 +388,9 @@
     font-size: 2.5rem;
   }
 
-  .floating-elements {
-    display: none; /* Hide floating elements on mobile for cleaner look */
-  }
+  /* .floating-elements {
+    display: none;
+  } */
 
   .hero-buttons {
     justify-content: center;

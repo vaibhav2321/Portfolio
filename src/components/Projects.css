@@ -2,6 +2,8 @@
   padding: 6rem 0;
   background: #111;
   color: white;
+  min-height: 100vh;
+  position: relative;
 }
 
 .container {
@@ -63,6 +65,7 @@
 .project-card:hover {
   border-color: rgba(255, 107, 53, 0.4);
   transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
 }
 
 .project-image {
@@ -79,6 +82,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  border-radius: 0;
 }
 
 .placeholder-content {
@@ -229,6 +233,7 @@
   border-radius: 20px;
   padding: 3rem;
   text-align: center;
+  margin-left: 10px;
 }
 
 .projects-cta h3 {

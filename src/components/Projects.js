@@ -16,7 +16,8 @@ const Projects = () => {
       category: 'Full-Stack',
       demoLink: '#',
       githubLink: '#',
-      features: ['User Authentication', 'Course Management', 'Payment Integration', 'Responsive Design']
+      features: ['User Authentication', 'Course Management', 'Payment Integration', 'Responsive Design'],
+      type: 'personal'
     },
     {
       id: 2,
@@ -27,7 +28,8 @@ const Projects = () => {
       category: 'Full-Stack',
       demoLink: '#',
       githubLink: '#',
-      features: ['Shopping Cart', 'User Authentication', 'Product Management', 'Order Processing']
+      features: ['Shopping Cart', 'User Authentication', 'Product Management', 'Order Processing'],
+      type: 'personal'
     },
     {
       id: 3,
@@ -38,7 +40,8 @@ const Projects = () => {
       category: 'Frontend',
       demoLink: '#',
       githubLink: '#',
-      features: ['Product Filtering', 'Dynamic Navigation', 'Responsive Layout', 'Modern UI/UX']
+      features: ['Product Filtering', 'Dynamic Navigation', 'Responsive Layout', 'Modern UI/UX'],
+      type: 'personal'
     },
     {
       id: 4,
@@ -49,7 +52,8 @@ const Projects = () => {
       category: 'Full-Stack',
       demoLink: '#',
       githubLink: '#',
-      features: ['User Permissions', 'Room Management', 'Booking System', 'Admin Dashboard']
+      features: ['User Permissions', 'Room Management', 'Booking System', 'Admin Dashboard'],
+      type: 'company'
     },
     {
       id: 5,
@@ -60,7 +64,8 @@ const Projects = () => {
       category: 'Frontend',
       demoLink: '#',
       githubLink: '#',
-      features: ['Contact Forms', 'Component Reusability', 'Performance Optimization', 'Form Validation']
+      features: ['Contact Forms', 'Component Reusability', 'Performance Optimization', 'Form Validation'],
+      type: 'company'
     },
     {
       id: 6,
@@ -71,7 +76,8 @@ const Projects = () => {
       category: 'Full-Stack',
       demoLink: '#',
       githubLink: '#',
-      features: ['React Frontend', 'Frappe Backend', 'Server Setup', 'System Integration']
+      features: ['React Frontend', 'Frappe Backend', 'Server Setup', 'System Integration'],
+      type: 'company'
     }
   ];
 
@@ -94,6 +100,77 @@ const Projects = () => {
     }
   };
 
+  const personalProjects = projects.filter(p => p.type === 'personal');
+  const companyProjects = projects.filter(p => p.type === 'company');
+
+  const renderProjects = (list) => (
+    <div className="projects-grid">
+      {list.map((project) => (
+        <div 
+          key={project.id}
+          className="project-card"
+        >
+          <div className="project-image">
+            <ImagePlaceholder 
+              // src={profilePhoto}
+              alt={project.title}
+              fallbackText={project.title}
+            />
+            <div className="project-overlay">
+              <div className="project-links">
+                <motion.a 
+                  href={project.demoLink}
+                  className="project-link"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaPlay />
+                </motion.a>
+                <motion.a 
+                  href={project.githubLink}
+                  className="project-link"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaGithub />
+                </motion.a>
+                <motion.a 
+                  href={project.demoLink}
+                  className="project-link"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaExternalLinkAlt />
+                </motion.a>
+              </div>
+            </div>
+            <div className="project-category">{project.category}</div>
+          </div>
+          
+          <div className="project-content">
+            <h3 className="project-title">{project.title}</h3>
+            <p className="project-description">{project.description}</p>
+            
+            <div className="project-features">
+              <h4>Key Features:</h4>
+              <ul>
+                {project.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="project-technologies">
+              {project.technologies.map((tech, index) => (
+                <span key={index} className="tech-tag">{tech}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <section id="projects" className="projects">
       <div className="container">
@@ -110,84 +187,13 @@ const Projects = () => {
             UI/UX design, and modern web technologies.
           </p>
         </motion.div>
+        <div>
+          <h1 className="projects-subtitle text-center font-bold text-orange">Company Projects</h1>
+          {renderProjects(companyProjects)}
 
-        <motion.div 
-          className="projects-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {projects.map((project) => (
-            <motion.div 
-              key={project.id}
-              className="project-card"
-              variants={itemVariants}
-              whileHover={{ 
-                y: -10,
-                boxShadow: "0 20px 40px rgba(255, 107, 53, 0.2)"
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="project-image">
-                <ImagePlaceholder 
-                  src={profilePhoto}
-                  alt={project.title}
-                  fallbackText={project.title}
-                />
-                <div className="project-overlay">
-                  <div className="project-links">
-                    <motion.a 
-                      href={project.demoLink}
-                      className="project-link"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaPlay />
-                    </motion.a>
-                    <motion.a 
-                      href={project.githubLink}
-                      className="project-link"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaGithub />
-                    </motion.a>
-                    <motion.a 
-                      href={project.demoLink}
-                      className="project-link"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaExternalLinkAlt />
-                    </motion.a>
-                  </div>
-                </div>
-                <div className="project-category">{project.category}</div>
-              </div>
-              
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                
-                <div className="project-features">
-                  <h4>Key Features:</h4>
-                  <ul>
-                    {project.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="project-technologies">
-                  {project.technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag">{tech}</span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+          <h1 className="projects-subtitle text-center font-bold text-orange">Personal Projects</h1>
+          {renderProjects(personalProjects)}
+        </div>
 
         <motion.div 
           className="projects-cta"
