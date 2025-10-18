@@ -76,6 +76,14 @@ const Hero = () => {
               
               <motion.button 
                 className="btn btn-secondary"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Software Engineer Vaibhav Verma resume.pdf';
+                  link.download = 'Vaibhav_Verma_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
                 whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(255, 255, 255, 0.1)" }}
                 whileTap={{ scale: 0.95 }}
               >
