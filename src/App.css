@@ -6,6 +6,8 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+  background: #000;
 }
 
 body {
@@ -17,15 +19,24 @@ body {
   background: #000;
   color: white;
   line-height: 1.6;
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
 }
 
 .App {
   min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
   background: #000;
+  position: relative;
 }
 
 main {
   padding-top: 80px; /* Account for fixed header */
+  background: #000;
+  min-height: calc(100vh - 80px);
+  min-height: calc(100dvh - 80px); /* Dynamic viewport height for mobile */
+  position: relative;
 }
 
 /* Global Styles */
@@ -125,6 +136,15 @@ main {
 
   main {
     padding-top: 70px;
+    min-height: calc(100vh - 70px);
+    min-height: calc(100dvh - 70px);
+  }
+
+  /* Ensure background covers full viewport on mobile */
+  html, body, .App {
+    background: #000 !important;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 }
 
@@ -144,6 +164,15 @@ main {
 
   main {
     padding-top: 65px;
+    min-height: calc(100vh - 65px);
+    min-height: calc(100dvh - 65px);
+  }
+
+  /* Force background on small mobile screens */
+  html, body, .App {
+    background: #000 !important;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 }
 
@@ -174,4 +203,25 @@ main {
 
 .border-orange {
   border-color: #ff6b35;
+}
+
+/* Fix for mobile background issues */
+@media (max-width: 768px) {
+  /* Ensure all sections have proper background */
+  section {
+    background: #000 !important;
+    position: relative;
+  }
+  
+  /* Fix for viewport height issues on mobile */
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: #000 !important;
+  }
+  
+  /* Ensure proper background coverage */
+  /* * {
+    background-color: inherit;
+  } */
 }

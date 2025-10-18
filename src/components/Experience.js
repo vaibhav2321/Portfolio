@@ -205,7 +205,7 @@ const Experience = () => {
           </motion.div>
         </div>
 
-        <motion.div 
+        {/* <motion.div 
           className="experience-cta"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -221,7 +221,7 @@ const Experience = () => {
           >
             Get In Touch
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

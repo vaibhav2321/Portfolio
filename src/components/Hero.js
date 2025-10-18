@@ -71,14 +71,14 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <FaEnvelope />
-                Hire Me
+                Contact Me
               </motion.button>
               
               <motion.button 
                 className="btn btn-secondary"
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/Software Engineer Vaibhav Verma resume.pdf';
+                  link.href = process.env.PUBLIC_URL + '/resume.pdf';
                   link.download = 'Vaibhav_Verma_Resume.pdf';
                   document.body.appendChild(link);
                   link.click();
