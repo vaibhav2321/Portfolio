@@ -36,14 +36,14 @@ const Services = () => {
       icon: <FaCloud />,
       title: 'Cloud Solutions',
       description: 'Deploying and managing applications on cloud platforms like AWS with scalable and secure infrastructure.',
-      features: ['AWS Services', 'Cloud Deployment', 'Scalable Architecture', 'DevOps Integration']
+      features: ['AWS Services', 'Cloud Deployment']
     },
-    {
-      icon: <FaPaintBrush />,
-      title: 'UI/UX Design',
-      description: 'Creating intuitive and visually appealing user interfaces that enhance user experience and engagement.',
-      features: ['User Interface Design', 'User Experience', 'Prototyping', 'Design Systems']
-    },
+    // {
+    //   icon: <FaPaintBrush />,
+    //   title: 'UI/UX Design',
+    //   description: 'Creating intuitive and visually appealing user interfaces that enhance user experience and engagement.',
+    //   features: ['User Interface Design', 'User Experience', 'Prototyping', 'Design Systems']
+    // },
     {
       icon: <FaCogs />,
       title: 'ERP Integration',

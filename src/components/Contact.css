@@ -53,6 +53,7 @@
   align-items: start;
 }
 
+
 .contact-info h3 {
   font-size: 1.8rem;
   color: white;
@@ -157,6 +158,7 @@
   border: 1px solid rgba(255, 107, 53, 0.2);
   border-radius: 20px;
   padding: 2rem;
+  width: 100%;
 }
 
 .contact-form {
@@ -325,8 +327,22 @@
   }
 
   .contact-content {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
+  }
+  
+  .contact-form-container {
+    order: 1; /* Form comes first */
+  }
+  
+  .contact-info {
+    order: 2; /* Contact info comes second */
+    text-align: center;
+  }
+  
+  .contact-form-container {
+    margin-bottom: 2rem;
   }
 
   .section-title {

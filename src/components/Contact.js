@@ -120,70 +120,6 @@ const Contact = () => {
 
         <div className="contact-content">
           <motion.div 
-            className="contact-info"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <h3>Get In Touch</h3>
-            <p>
-              I'm always interested in hearing about new opportunities and projects. 
-              Whether you have a question or just want to say hi, feel free to reach out!
-            </p>
-            
-            <div className="contact-details">
-              {contactInfo.map((info, index) => (
-                <motion.div 
-                  key={index}
-                  className="contact-item"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="contact-icon">{info.icon}</div>
-                  <div className="contact-text">
-                    <span className="contact-label">{info.label}</span>
-                    {info.link ? (
-                      <a href={info.link} className="contact-value" target="_blank" rel="noopener noreferrer">
-                        {info.value}
-                      </a>
-                    ) : (
-                      <span className="contact-value">{info.value}</span>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="social-links">
-              <h4>Follow Me</h4>
-              <div className="social-icons">
-                <motion.a 
-                  href="https://www.linkedin.com/in/vaibhav-verma-41b626248/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon"
-                  whileHover={{ scale: 1.2, y: -5 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <FaLinkedin />
-                </motion.a>
-                <motion.a 
-                  href="https://github.com/vaibhav2321"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-icon"
-                  whileHover={{ scale: 1.2, y: -5 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <FaGithub />
-                </motion.a>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div 
             className="contact-form-container"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -283,6 +219,70 @@ const Contact = () => {
                 </motion.div>
               )}
             </form>
+          </motion.div>
+
+          <motion.div 
+            className="contact-info"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <h3>Get In Touch</h3>
+            <p>
+              I'm always interested in hearing about new opportunities and projects. 
+              Whether you have a question or just want to say hi, feel free to reach out!
+            </p>
+            
+            <div className="contact-details">
+              {contactInfo.map((info, index) => (
+                <motion.div 
+                  key={index}
+                  className="contact-item"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="contact-icon">{info.icon}</div>
+                  <div className="contact-text">
+                    <span className="contact-label">{info.label}</span>
+                    {info.link ? (
+                      <a href={info.link} className="contact-value" target="_blank" rel="noopener noreferrer">
+                        {info.value}
+                      </a>
+                    ) : (
+                      <span className="contact-value">{info.value}</span>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="social-links">
+              <h4>Follow Me</h4>
+              <div className="social-icons">
+                <motion.a 
+                  href="https://www.linkedin.com/in/vaibhav-verma-41b626248/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  whileHover={{ scale: 1.2, y: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaLinkedin />
+                </motion.a>
+                <motion.a 
+                  href="https://github.com/vaibhav2321"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  whileHover={{ scale: 1.2, y: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaGithub />
+                </motion.a>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

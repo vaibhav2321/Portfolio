@@ -4,11 +4,31 @@ import { FaCode, FaDatabase, FaCloud, FaTools } from 'react-icons/fa';
 import './About.css';
 
 const About = () => {
-  const skills = [
-    { name: 'Frontend Development', icon: <FaCode />, level: 90 },
-    { name: 'Backend Development', icon: <FaDatabase />, level: 85 },
-    { name: 'Cloud & DevOps', icon: <FaCloud />, level: 80 },
-    { name: 'Tools & Technologies', icon: <FaTools />, level: 88 }
+  const skillCategories = [
+    { 
+      name: 'Frontend Development', 
+      icon: <FaCode />, 
+      description: 'Building responsive and interactive user interfaces',
+      technologies: ['React.js', 'Next.js', 'JavaScript', 'HTML/CSS', 'Tailwind CSS']
+    },
+    { 
+      name: 'Backend Development', 
+      icon: <FaDatabase />, 
+      description: 'Creating robust server-side applications and APIs',
+      technologies: ['Node.js', 'Python', 'Express.js', 'REST APIs', 'PostgreSQL', 'MySQL']
+    },
+    { 
+      name: 'Cloud & DevOps', 
+      icon: <FaCloud />, 
+      description: 'Deploying and managing applications in the cloud',
+      technologies: ['AWS', 'Docker']
+    },
+    { 
+      name: 'Tools & Technologies', 
+      icon: <FaTools />, 
+      description: 'Development tools and version control systems',
+      technologies: ['Git', 'GitHub', 'VS Code', 'Postman']
+    }
   ];
 
   const containerVariants = {
@@ -71,26 +91,34 @@ const About = () => {
           <motion.div className="about-skills" variants={itemVariants}>
             <h3>Technical Skills</h3>
             <div className="skills-grid">
-              {skills.map((skill, index) => (
+              {skillCategories.map((category, index) => (
                 <motion.div 
                   key={index}
-                  className="skill-item"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
+                  className="skill-category"
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  <div className="skill-icon">{skill.icon}</div>
-                  <div className="skill-info">
-                    <h4>{skill.name}</h4>
-                    <div className="skill-bar">
-                      <motion.div 
-                        className="skill-progress"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: index * 0.2 }}
-                      />
+                  <div className="category-header">
+                    <div className="category-icon">{category.icon}</div>
+                    <div className="category-info">
+                      <h4>{category.name}</h4>
+                      <p>{category.description}</p>
                     </div>
-                    <span className="skill-percentage">{skill.level}%</span>
+                  </div>
+                  <div className="technologies-list">
+                    {category.technologies.map((tech, techIndex) => (
+                      <motion.span 
+                        key={techIndex}
+                        className="tech-badge"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: techIndex * 0.1 }}
+                        whileHover={{ scale: 1.1 }}
+                      >
+                        {tech}
+                      </motion.span>
+                    ))}
                   </div>
                 </motion.div>
               ))}
